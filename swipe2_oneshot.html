@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper 연결하기</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
+    <link rel="stylesheet" href="css/swipe_oneshot.css">
+
+    <script src="js/swiper-bundle.js"></script>
+    <script></script>
+
+</head>
+
+<!-- 아래 내용은 "https://swiperjs.com/get-started#download-assets"페이지에서
+"Add Swiper HTML Layout"에 있는 내용 복붙
+ -->
+
+<body>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+
+            <!-- Slides -->
+            <!-- 기존의 클래스는 절대 건드리지 말고 추가해야함 -->
+            <div class="swiper-slide pic1">Slide 1</div>
+            <div class="swiper-slide pic2">Slide 2</div>
+            <div class="swiper-slide pic3">Slide 3</div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- j쿼리아 아니기 때문에 펑션 필요 없음. 
+    스크립트를 적용하려고 하는 부분 바로 밑에 스크립트 입력 -->
+
+    <!-- 아래 내용은 "https://swiperjs.com/get-started#download-assets"페이지에서
+"Initialize Swiper"에 있는 내용 복붙
+     -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',//vertical,horizontal 중에 선택
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
+            keyboard: {
+                enabled: true,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    </script>
+
+</body>
+
+</html>
